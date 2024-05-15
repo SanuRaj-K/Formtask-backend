@@ -1,13 +1,14 @@
 const formModel = require("../Models/Schema");
 
 const post = async (req, res) => {
-  const { name, rating, dd, mm, yy } = req.body.formvalues;
-  const { subjects } = req.body;
+  const { name, rating, dd, mm, yy, subject,university } = req.body.formvalues;
+
   const dob = `${dd}/ ${mm}/${yy}`;
 
   const user = new formModel({
-    username: name,
-    subject: subjects,
+    name: name,
+    subject: subject,
+    university: university,
     rating: rating,
     dob: dob,
   });

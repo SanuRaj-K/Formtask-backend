@@ -5,7 +5,10 @@ const formSchema = mongoose.Schema({
     type: String,
   },
   subject: {
-    type: Array,
+    type: String,
+  },
+  university: {
+    type: String,
   },
   dob: { type: String },
   rating: { type: Number },
@@ -13,5 +16,4 @@ const formSchema = mongoose.Schema({
 
 const schema = mongoose.model("form", formSchema);
 
-module.exports = schema; 
- 
+module.exports = schema;
