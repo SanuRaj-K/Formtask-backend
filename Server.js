@@ -10,6 +10,7 @@ app.use(express.json());
 app.use(
   cors({
     origin: "https://formtask-forntend.vercel.app",
+    credentials:true
     
   })
 );
