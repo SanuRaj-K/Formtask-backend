@@ -9,14 +9,15 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: "*",
+    origin: "https://formtask-forntend.vercel.app",
+    
   })
 );
 app.listen(port, (req, res) => {
   console.log("App listening");
 });
 
-app.use("/dummy", formRoute);
+app.use("/api", formRoute);
 mongoose
   .connect(process.env.CONNECTIONSTRING)
   .then((res) => {
